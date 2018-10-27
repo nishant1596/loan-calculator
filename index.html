@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Loan calculator</title>
+  <style>
+    #loading,#results1{
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <span class="pb-3" style="font-size:30px; color:grey;">
+            Loan Calculator by Nishant <br> with loading-icon
+          </span>
+          <div id="errorbox"></div>
+          <form id="loan-form">
+            <div class="form-group">
+              <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">$</span>
+          </div>
+          <input type="text" class="form-control" id="amount" placeholder="Enter Amount" aria-describedby="inputGroupPrepend" >
+        </div>
+            </div>
+
+            <div class="form-group" action="#">
+              <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">%</span>
+          </div>
+          <input type="text" class="form-control" id="interest" placeholder="Interest" aria-describedby="inputGroupPrepend" >
+        </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">Years</span>
+          </div>
+          <input type="number" class="form-control" id="years" placeholder="Enter the years to repay the loan" aria-describedby="inputGroupPrepend" >
+        </div>
+            </div>
+            <!-- <div class="form-group">
+              <label for="simple_interest_radio">Simple Interest</label>
+              <input type="radio" name="interestradio"  id="simple_interest_radio">
+              <span class="mr-5"></span>
+              <label for="compound_interest_radio">Compound Interest</label>
+              <input type="radio" name="interestradio"  id="compound_interest_radio">
+            </div> -->
+            <div class="form-group">
+
+            </div>
+
+            <div class="form-group">
+                <button type="submit"  value="" class="btn btn-block btn-dark" id="submit">Calculate</button>
+            </div>
+          </form>
+
+
+          <!-- Adding Loader here-->
+          <center>
+            <img src="img/loading.gif" height="100" width="100" id="loading">
+          </center>
+          <!--Results-->
+<hr>
+          <div id="results1">
+            <h1 class="heading" style="font-size:25px">Results</h1>
+          <div class="form-group">
+            <input type="text" disabled class="form-control" placeholder="Monthly Payment" id="monthly-payment">
+          </div>
+          <div class="form-group">
+            <input type="text" disabled class="form-control" placeholder="Total Payment" id="total-payment">
+          </div>
+          <div class="form-group">
+            <input type="text" disabled class="form-control" placeholder="Total Interest" id="total-interest">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="app.js" charset="utf-8"></script>
+</html>
